@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full-Stack Web Dev Master Quiz</title>
+    <meta name="description" content="A comprehensive full-stack web development quiz covering JavaScript, PHP, DOM, MVC, OOP, HTTP, and more.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <div class="app-container">
+        <header class="glass-panel">
+            <div class="logo">
+                <i class="fa-solid fa-code"></i>
+                <span>MasterQuiz</span>
+            </div>
+            <button id="theme-toggle" aria-label="Toggle Dark Mode">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </header>
+
+        <main id="main-content">
+            <!-- Home Screen -->
+            <section id="home-screen" class="view active-view">
+                <div class="hero">
+                    <h1 class="gradient-text">Master Your Web Dev Skills</h1>
+                    <p>170 questions covering JavaScript, PHP, DOM, MVC, OOP, Security, and more.</p>
+                </div>
+                
+                <div class="stats-overview glass-panel">
+                    <div class="stat">
+                        <i class="fa-solid fa-layer-group text-purple"></i>
+                        <div class="stat-info">
+                            <span class="stat-value" id="total-sections">0</span>
+                            <span class="stat-label">Topics</span>
+                        </div>
+                    </div>
+                    <div class="stat">
+                        <i class="fa-solid fa-list-check text-blue"></i>
+                        <div class="stat-info">
+                            <span class="stat-value" id="total-questions">0</span>
+                            <span class="stat-label">Questions</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button id="btn-start-full" class="btn btn-primary btn-large">
+                        <i class="fa-solid fa-play"></i> Start Full Practice
+                    </button>
+                </div>
+
+                <h2 class="section-title">Practice by Topic</h2>
+                <div id="topics-grid" class="topics-grid">
+                    <!-- Topics generated via JS -->
+                </div>
+            </section>
+
+            <!-- Quiz Screen -->
+            <section id="quiz-screen" class="view">
+                <div class="quiz-header glass-panel">
+                    <button id="btn-back-home" class="btn-icon">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                    <div class="quiz-progress-info">
+                        <span id="current-topic-label" class="topic-label">Topic Name</span>
+                        <div class="progress-text">Question <span id="current-q-num">1</span> of <span id="total-q-num">10</span></div>
+                    </div>
+                    <div class="score-display">
+                        <i class="fa-solid fa-star text-yellow"></i>
+                        <span id="current-score">0</span>
+                    </div>
+                </div>
+
+                <div class="progress-bar-container">
+                    <div id="progress-bar" class="progress-bar"></div>
+                </div>
+
+                <div class="question-container glass-panel" id="question-container">
+                    <h2 id="question-text" class="question-text">Question text goes here?</h2>
+                    
+                    <div id="options-container" class="options-container">
+                        <!-- Options generated via JS -->
+                    </div>
+                </div>
+
+                <div class="quiz-controls">
+                    <button id="btn-prev" class="btn btn-secondary" disabled>
+                        <i class="fa-solid fa-angle-left"></i> Previous
+                    </button>
+                    <button id="btn-next" class="btn btn-primary" disabled>
+                        Next <i class="fa-solid fa-angle-right"></i>
+                    </button>
+                    <button id="btn-finish" class="btn btn-success hidden">
+                        <i class="fa-solid fa-flag-checkered"></i> Finish Quiz
+                    </button>
+                </div>
+            </section>
+
+            <!-- Results Screen -->
+            <section id="results-screen" class="view">
+                <div class="results-card glass-panel">
+                    <div class="results-header">
+                        <h2>Quiz Complete!</h2>
+                        <div id="result-topic" class="topic-label">Full Practice</div>
+                    </div>
+                    
+                    <div class="score-circle">
+                        <svg viewBox="0 0 36 36" class="circular-chart">
+                            <path class="circle-bg"
+                              d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+                            <path class="circle"
+                              id="score-circle-path"
+                              stroke-dasharray="0, 100"
+                              d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+                            <text x="18" y="20.35" class="percentage" id="score-percentage">0%</text>
+                        </svg>
+                    </div>
+
+                    <div class="results-stats">
+                        <div class="r-stat">
+                            <span class="r-value text-green" id="correct-count">0</span>
+                            <span class="r-label">Correct</span>
+                        </div>
+                        <div class="r-stat">
+                            <span class="r-value text-red" id="incorrect-count">0</span>
+                            <span class="r-label">Incorrect</span>
+                        </div>
+                        <div class="r-stat">
+                            <span class="r-value text-blue" id="unanswered-count">0</span>
+                            <span class="r-label">Skipped</span>
+                        </div>
+                    </div>
+
+                    <div class="results-actions">
+                        <button id="btn-review" class="btn btn-secondary">
+                            <i class="fa-solid fa-magnifying-glass"></i> Review Answers
+                        </button>
+                        <button id="btn-home-from-results" class="btn btn-primary">
+                            <i class="fa-solid fa-house"></i> Return Home
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Load data first, then app logic -->
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1596 @@
+## 🟡 Section 1: JavaScript Fundamentals
+
+**Q1.** What is the correct order of steps when a browser processes JavaScript?
+
+A) Compilation → Parsing → Loading → Execution
+B) Loading → Parsing → Compilation → Execution → DOM Interaction → Event Handling
+C) Parsing → Loading → Execution → Compilation
+D) Execution → Loading → Compilation → Parsing
+
+---
+
+**Q2.** What is an Abstract Syntax Tree (AST)?
+
+A) A visual diagram of the webpage layout
+B) An internal structure the JavaScript engine creates after parsing code to understand its meaning
+C) A list of all variables declared in a JavaScript file
+D) The rendered version of the HTML document
+
+---
+
+**Q3.** What does the JavaScript event loop primarily do?
+
+A) It compiles JavaScript code before execution
+B) It connects JavaScript to the CSS stylesheet
+C) It manages asynchronous operations and keeps the page responsive
+D) It converts HTML elements into DOM nodes
+
+---
+
+**Q4.** What is the result of `10 % 3` in JavaScript?
+
+A) 3
+B) 0
+C) 1
+D) 3.33
+
+---
+
+**Q5.** Which of the following correctly describes the `===` operator in JavaScript?
+
+A) It checks only if two values are equal regardless of type
+B) It assigns a value to a variable
+C) It checks if two values are equal in both value AND data type
+D) It compares two variables and returns the larger one
+
+---
+
+**Q6.** What is the output of the following code?
+```javascript
+let x = 5;
+x += 3;
+console.log(x);
+```
+A) 5
+B) 3
+C) 53
+D) 8
+
+---
+
+**Q7.** Which logical operator returns `true` only when BOTH conditions are true?
+
+A) `||`
+B) `!`
+C) `&&`
+D) `==`
+
+---
+
+**Q8.** What is the purpose of the ternary operator `?:` in JavaScript?
+
+A) To loop through an array of values
+B) To declare a variable with three data types
+C) To write a concise one-line if...else statement
+D) To compare three values simultaneously
+
+---
+
+**Q9.** Which type of JavaScript loop is guaranteed to execute its code block at least once before checking the condition?
+
+A) `for` loop
+B) `while` loop
+C) `for...of` loop
+D) `do...while` loop
+
+---
+
+**Q10.** What is the key difference between `for...in` and `for...of` loops?
+
+A) `for...in` only works on arrays; `for...of` only works on strings
+B) `for...in` iterates over object keys/properties; `for...of` iterates over values of iterables like arrays
+C) `for...of` iterates over keys; `for...in` iterates over values
+D) They are functionally identical
+
+---
+
+**Q11.** What does the `break` statement do inside a loop?
+
+A) Skips the current iteration and continues to the next one
+B) Pauses the loop temporarily
+C) Immediately exits the loop entirely
+D) Restarts the loop from the beginning
+
+---
+
+**Q12.** What does the `continue` statement do inside a loop?
+
+A) Exits the loop entirely
+B) Restarts the loop from iteration zero
+C) Skips the rest of the current iteration and moves to the next
+D) Terminates the entire program
+
+---
+
+**Q13.** Which of the following is a benefit of using functions in JavaScript?
+
+A) They make the browser load pages faster automatically
+B) They allow you to write code once and reuse it multiple times
+C) They replace the need for variables
+D) They prevent all runtime errors
+
+---
+
+**Q14.** What does "hoisting" mean for JavaScript function declarations?
+
+A) The function is moved to the bottom of the file automatically
+B) The function can only be called inside other functions
+C) The function is available to be called before it appears in the source code
+D) The function automatically returns `undefined`
+
+---
+
+**Q15.** Which variable declaration keyword does NOT respect block scope in JavaScript?
+
+A) `let`
+B) `const`
+C) `var`
+D) All of them respect block scope
+
+---
+
+**Q16.** What is the difference between `let` and `const` in JavaScript?
+
+A) `let` is for strings only; `const` is for numbers only
+B) `const` creates a variable that cannot be reassigned; `let` can be reassigned
+C) `const` is block-scoped; `let` is function-scoped
+D) They are completely identical
+
+---
+
+**Q17.** Which of the following correctly creates an arrow function in JavaScript?
+
+A) `function => (x) { return x * 2; }`
+B) `const double = (x) => x * 2;`
+C) `arrow double(x) { return x * 2; }`
+D) `const double = function => x * 2;`
+
+---
+
+**Q18.** What is the first element's index in a JavaScript array?
+
+A) 1
+B) -1
+C) 0
+D) It depends on the array type
+
+---
+
+**Q19.** Which array method adds a new element to the END of an array?
+
+A) `unshift()`
+B) `shift()`
+C) `pop()`
+D) `push()`
+
+---
+
+**Q20.** What does `arr.slice(1, 3)` return?
+
+A) Removes elements at index 1 and 3
+B) Returns a new array with elements from index 1 up to (not including) index 3
+C) Returns the element at index 1 and 3 only
+D) Returns the entire array except the first element
+
+---
+
+**Q21.** How do you access the element in row 2, column 1 of a 2D array called `grid`?
+
+A) `grid[1][2]`
+B) `grid[2,1]`
+C) `grid[2][1]`
+D) `grid.row(2).col(1)`
+
+---
+
+**Q22.** What is the correct way to access the value of key `"name"` in a JavaScript object called `person`?
+
+A) `person[name]`
+B) `person->name`
+C) `person.name` or `person["name"]`
+D) `person::name`
+
+---
+
+**Q23.** What is the primary difference between arrays and objects in JavaScript?
+
+A) Arrays store numbers only; objects store strings only
+B) Arrays use ordered numeric indices; objects use named string keys
+C) Objects are faster than arrays for all operations
+D) Arrays cannot be nested inside objects
+
+---
+
+## 🟠 Section 2: JavaScript Events & DOM
+
+**Q24.** Which of the following is an example of a browser action event (not a user action)?
+
+A) Clicking a button
+B) Pressing a key
+C) The page finishing loading
+D) Moving the mouse
+
+---
+
+**Q25.** What is the correct flow when an event occurs in JavaScript?
+
+A) Handler executes → Event detected → Event occurs
+B) Event occurs → Event detected → Handler executes
+C) Event detected → Handler executes → Event occurs
+D) Event occurs → Handler executes → Event detected
+
+---
+
+**Q26.** Which type of event fires when a user moves the mouse cursor over an HTML element?
+
+A) `keydown`
+B) `mouseover`
+C) `focus`
+D) `scroll`
+
+---
+
+**Q27.** Which event fires when a user clicks away from (leaves) an input field?
+
+A) `change`
+B) `focus`
+C) `blur`
+D) `submit`
+
+---
+
+**Q28.** Which of the three event handling methods allows you to attach multiple functions to the same event on the same element?
+
+A) Inline HTML event attributes (`onclick="..."`)
+B) DOM property assignment (`element.onclick = function(){}`)
+C) `addEventListener()`
+D) All three methods support multiple handlers equally
+
+---
+
+**Q29.** What is the main disadvantage of using inline HTML event handling such as `onclick="myFunc()"` directly in an HTML tag?
+
+A) It is slower than all other methods
+B) It mixes HTML and JavaScript together, making code harder to maintain
+C) It only works on button elements
+D) It cannot call functions with parameters
+
+---
+
+**Q30.** What does `event.target` refer to inside an event handler?
+
+A) The parent element of the element that was clicked
+B) The document root
+C) The specific element that triggered the event
+D) The event handler function itself
+
+---
+
+**Q31.** What is the default event propagation behavior in JavaScript?
+
+A) Capturing — events travel from parent down to the target element
+B) Bubbling — events travel from the target element upward to parent elements
+C) Both happen simultaneously
+D) Events do not propagate by default
+
+---
+
+**Q32.** Given this HTML: `<div> → <section> → <button>`. When the button is clicked, what is the correct bubbling order?
+
+A) document → div → section → button
+B) button → document → section → div
+C) button → section → div → document
+D) div → section → button → document
+
+---
+
+**Q33.** What is the main benefit of using Event Delegation?
+
+A) It makes events propagate faster through the DOM
+B) It allows you to attach one listener to a parent instead of many listeners to each child, improving performance
+C) It converts bubbling phase to capturing phase
+D) It prevents all events from propagating
+
+---
+
+**Q34.** Which of the following is a correct use case for `event.preventDefault()`?
+
+A) Stopping an event from bubbling to parent elements
+B) Removing all event listeners from an element
+C) Preventing a form from reloading the page when submitted
+D) Stopping JavaScript from executing
+
+---
+
+**Q35.** What does the DOM stand for?
+
+A) Document Object Mapper
+B) Data Object Model
+C) Document Object Model
+D) Dynamic Output Module
+
+---
+
+**Q36.** Which DOM method selects a SINGLE element by its unique HTML `id` attribute?
+
+A) `document.querySelectorAll()`
+B) `document.getElementsByClassName()`
+C) `document.getElementById()`
+D) `document.getElementsByTagName()`
+
+---
+
+**Q37.** What does `document.querySelector(".card")` return?
+
+A) All elements with the class "card"
+B) The first element that has the class "card"
+C) An element with the id "card"
+D) All elements of type `<card>`
+
+---
+
+**Q38.** What is the difference between `element.textContent` and `element.innerHTML`?
+
+A) `textContent` supports HTML tags; `innerHTML` treats everything as plain text
+B) `textContent` sets plain text safely; `innerHTML` renders HTML tags — but can be a security risk with user input
+C) They are completely identical in all situations
+D) `innerHTML` only works on `<div>` elements
+
+---
+
+**Q39.** Which CSS property name convention must be used when applying styles through `element.style` in JavaScript?
+
+A) Hyphenated: `element.style.background-color`
+B) CamelCase: `element.style.backgroundColor`
+C) Uppercase: `element.style.BACKGROUNDCOLOR`
+D) Snake_case: `element.style.background_color`
+
+---
+
+**Q40.** What does `element.parentNode` return?
+
+A) The first child of the element
+B) The next sibling of the element
+C) The element that directly contains (wraps) the given element
+D) The document root
+
+---
+
+**Q41.** What is the correct 3-step process to create and add a new element to the DOM?
+
+A) `findElement()` → `insertText()` → `display()`
+B) `createElement()` → set content/attributes → `appendChild()`
+C) `newNode()` → `addContent()` → `render()`
+D) `makeElement()` → `placeElement()` → `showElement()`
+
+---
+
+**Q42.** To remove an element from the DOM using the classic method, what do you need?
+
+A) Only the element itself — call `.remove()` directly
+B) The element's CSS class name
+C) The element's parent — call `parentNode.removeChild(element)`
+D) The element's ID and the document root
+
+---
+
+**Q43.** Which DOM node type represents the text content inside an HTML element?
+
+A) Attribute Node
+B) Element Node
+C) Document Node
+D) Text Node
+
+---
+
+## 🔵 Section 3: PHP Fundamentals
+
+**Q44.** Which of the following best describes the role of the back-end in a web application?
+
+A) Renders the visual design and layout for users
+B) Processes data, manages databases, and handles application logic on the server
+C) Runs entirely inside the user's browser
+D) Manages CSS animations and transitions
+
+---
+
+**Q45.** What does PHP stand for?
+
+A) Personal Home Page
+B) Preprocessed Hypertext Pages
+C) Hypertext Preprocessor
+D) Public HTML Processor
+
+---
+
+**Q46.** In the PHP request lifecycle, what does the server send back to the browser after executing PHP code?
+
+A) The raw PHP source code
+B) The MySQL database contents
+C) Only HTML, CSS, and JavaScript — the PHP is never visible to the user
+D) A JSON file containing all variables
+
+---
+
+**Q47.** What must every PHP statement end with?
+
+A) A colon `:`
+B) A semicolon `;`
+C) A period `.`
+D) A closing tag `?>`
+
+---
+
+**Q48.** Which symbol must prefix every PHP variable name?
+
+A) `#`
+B) `@`
+C) `&`
+D) `$`
+
+---
+
+**Q49.** What is the output of the following PHP code?
+```php
+$a = 5;
+$b = '5';
+var_dump($a == $b);
+```
+A) `bool(false)`
+B) `bool(true)`
+C) `int(5)`
+D) `NULL`
+
+---
+
+**Q50.** In PHP, what operator is used to join (concatenate) two strings together?
+
+A) `+`
+B) `&`
+C) `.`
+D) `,`
+
+---
+
+**Q51.** What does `strtoupper("hello")` return in PHP?
+
+A) `"Hello"`
+B) `"HELLO"`
+C) `"hello"`
+D) `5`
+
+---
+
+**Q52.** Which PHP function returns the number of characters in a string?
+
+A) `count()`
+B) `str_length()`
+C) `strlen()`
+D) `size()`
+
+---
+
+**Q53.** What does `substr("Emira", 1, 3)` return in PHP?
+
+A) `"Emi"`
+B) `"mir"`
+C) `"ira"`
+D) `"Emir"`
+
+---
+
+**Q54.** Which PHP data type stores `true` or `false`?
+
+A) Integer
+B) String
+C) Boolean
+D) Float
+
+---
+
+**Q55.** What is the value of `$result` after this PHP code runs?
+```php
+$a = 10;
+$b = 3;
+$result = $a % $b;
+```
+A) 3
+B) 0
+C) 1
+D) 3.33
+
+---
+
+**Q56.** Which PHP loop is specifically designed to iterate over all elements in an array, including associative arrays?
+
+A) `for`
+B) `while`
+C) `do-while`
+D) `foreach`
+
+---
+
+**Q57.** What is the correct syntax to define a PHP function that accepts a parameter and returns a value?
+
+A) `def greet($name) { return "Hello " . $name; }`
+B) `function greet($name) { return "Hello " . $name; }`
+C) `func greet($name) => "Hello " . $name;`
+D) `function greet => ($name) { return "Hello"; }`
+
+---
+
+**Q58.** In PHP, what is function scope?
+
+A) Variables declared outside functions are accessible everywhere inside functions automatically
+B) Variables declared inside a function only exist within that function and disappear after it ends
+C) All PHP variables share one global scope regardless of where they are declared
+D) `const` variables can be accessed inside functions but `$variables` cannot
+
+---
+
+**Q59.** In PHP, what is the difference between an indexed array and an associative array?
+
+A) Indexed arrays can only hold strings; associative arrays can hold any type
+B) Indexed arrays use numeric keys starting at 0; associative arrays use custom string keys
+C) Associative arrays are faster than indexed arrays
+D) Indexed arrays cannot be looped through
+
+---
+
+**Q60.** Which PHP function adds an element to the beginning of an array?
+
+A) `array_push()`
+B) `array_pop()`
+C) `array_unshift()`
+D) `array_shift()`
+
+---
+
+**Q61.** What does `count($array)` return in PHP?
+
+A) The sum of all numeric elements in the array
+B) The index of the last element
+C) The total number of elements in the array
+D) The memory size of the array
+
+---
+
+**Q62.** What is a multidimensional array in PHP?
+
+A) An array that can only store one data type
+B) An array containing other arrays as its elements, used to represent tables or grids
+C) An array with more than 100 elements
+D) An array that uses both numeric and string keys at the same time
+
+---
+
+**Q63.** What does the `action` attribute in an HTML form specify?
+
+A) The HTTP method to use (GET or POST)
+B) The URL of the PHP script that will process the submitted form data
+C) The type of input fields in the form
+D) The form's unique CSS identifier
+
+---
+
+**Q64.** What is the key security advantage of using POST over GET for sensitive form data?
+
+A) POST is encrypted by default; GET is not
+B) POST data is hidden in the HTTP request body and not visible in the URL
+C) POST has no character limit; GET does
+D) POST automatically validates data before sending
+
+---
+
+**Q65.** Which PHP function checks if a variable exists AND is not null?
+
+A) `empty()`
+B) `is_null()`
+C) `exists()`
+D) `isset()`
+
+---
+
+**Q66.** What is the correct PHP call to validate that a string contains a properly formatted email address?
+
+A) `validate_email($email)`
+B) `filter_var($email, FILTER_SANITIZE_EMAIL)`
+C) `filter_var($email, FILTER_VALIDATE_EMAIL)`
+D) `check_format($email, "email")`
+
+---
+
+**Q67.** Which filter constant is used in PHP to remove HTML tags from user input to protect against XSS?
+
+A) `FILTER_VALIDATE_EMAIL`
+B) `FILTER_SANITIZE_NUMBER_INT`
+C) `FILTER_SANITIZE_URL`
+D) `FILTER_SANITIZE_STRING`
+
+---
+
+**Q68.** What is the difference between validation and sanitization in PHP?
+
+A) Validation cleans input; sanitization checks if it is correct
+B) They are the same thing with different names
+C) Validation checks if input is correct and complete; sanitization cleans input to remove harmful characters
+D) Sanitization is only used for email addresses; validation is for numbers
+
+---
+
+## 🟢 Section 4: PHP Sessions, File Handling & Cookies
+
+**Q69.** What is a PHP session?
+
+A) A temporary variable stored in the HTML file
+B) A way to store user data across multiple pages on the server side
+C) A cookie stored permanently in the browser
+D) An encrypted file on the user's computer
+
+---
+
+**Q70.** Where is session data stored compared to cookie data?
+
+A) Sessions are stored in the database; cookies are stored in JavaScript
+B) Sessions are stored on the server; cookies are stored in the user's browser
+C) Both are stored in the browser
+D) Both are stored on the server
+
+---
+
+**Q71.** What is the correct way to start or resume a PHP session?
+
+A) `$_SESSION = start();`
+B) `session_open();`
+C) `session_start();`
+D) `start_session();`
+
+---
+
+**Q72.** Which PHP superglobal array is used to store and access session variables?
+
+A) `$_COOKIE`
+B) `$_SERVER`
+C) `$_SESSION`
+D) `$_GLOBAL`
+
+---
+
+**Q73.** What is the correct PHP combination to fully log a user out and destroy all their session data?
+
+A) `session_close();`
+B) `session_unset(); session_destroy();`
+C) `unset($_SESSION); session_end();`
+D) `logout(); clear_session();`
+
+---
+
+**Q74.** What is the difference between `unset($_SESSION["key"])` and `session_destroy()`?
+
+A) They do exactly the same thing
+B) `unset()` removes one specific session variable; `session_destroy()` wipes all session data
+C) `session_destroy()` removes one variable; `unset()` destroys the entire session
+D) `session_destroy()` only works after the user logs out manually
+
+---
+
+**Q75.** Where must `session_start()` be called in a PHP file?
+
+A) After all HTML output has been sent
+B) Inside the `<body>` tag
+C) At the very top of the file, before any HTML or output
+D) Inside a function only
+
+---
+
+**Q76.** What is a cookie in web development?
+
+A) A small file stored on the server containing user login data
+B) A small file stored in the user's browser used to remember data between visits
+C) A PHP variable that persists between different user accounts
+D) A database table used to track user activity
+
+---
+
+**Q77.** Which PHP function is used to create a cookie?
+
+A) `create_cookie()`
+B) `$_COOKIE[] = value;`
+C) `setcookie()`
+D) `store_cookie()`
+
+---
+
+**Q78.** Which PHP file mode opens a file for writing, creates it if it doesn't exist, and adds data to the END without overwriting?
+
+A) `"w"`
+B) `"r+"`
+C) `"x"`
+D) `"a"`
+
+---
+
+**Q79.** Which PHP file mode creates a NEW file for writing and returns an error if the file already exists?
+
+A) `"w"`
+B) `"a"`
+C) `"r"`
+D) `"x"`
+
+---
+
+**Q80.** What is the purpose of `fclose()` in PHP file handling?
+
+A) Deletes the file from the server permanently
+B) Reads the last line of a file
+C) Closes an open file after reading or writing to free server resources
+D) Checks if the file exists before opening it
+
+---
+
+**Q81.** Which PHP function reads an entire file's content as a single string?
+
+A) `fread()`
+B) `fgets()`
+C) `file_put_contents()`
+D) `file_get_contents()`
+
+---
+
+**Q82.** What does the `FILE_APPEND` flag do when passed to `file_put_contents()`?
+
+A) Locks the file during writing
+B) Reads the file before writing
+C) Adds data to the end of the file without overwriting existing content
+D) Creates a backup of the file before overwriting
+
+---
+
+**Q83.** What PHP function is used to permanently delete a file from the server?
+
+A) `delete()`
+B) `unlink()`
+C) `remove()`
+D) `fdelete()`
+
+---
+
+**Q84.** When uploading a file in PHP, which two form attributes are both required for the upload to work?
+
+A) `method="get"` and `enctype="application/json"`
+B) `method="post"` and `enctype="multipart/form-data"`
+C) `method="post"` and `enctype="text/plain"`
+D) `method="file"` and `enctype="multipart/form-data"`
+
+---
+
+**Q85.** Which `$_FILES` key gives you the temporary server location of an uploaded file?
+
+A) `$_FILES['file']['name']`
+B) `$_FILES['file']['type']`
+C) `$_FILES['file']['tmp_name']`
+D) `$_FILES['file']['path']`
+
+---
+
+**Q86.** What is authentication in web applications?
+
+A) The process of controlling what resources a logged-in user can access
+B) The process of verifying a user's identity — confirming they are who they claim to be
+C) The process of encrypting data before storing it in a database
+D) The process of validating form input fields
+
+---
+
+**Q87.** Which of the following correctly describes the difference between authentication and authorization?
+
+A) They are the same process applied at different times
+B) Authentication = who you are (login check); Authorization = what you can do (access control)
+C) Authorization happens before authentication
+D) Authentication applies only to admin users
+
+---
+
+**Q88.** Which PHP function is used to verify a password against its stored hash?
+
+A) `md5_verify()`
+B) `hash_check()`
+C) `password_verify()`
+D) `compare_hash()`
+
+---
+
+## 🔴 Section 5: PHP Databases & MySQL
+
+**Q89.** What is a database in web development?
+
+A) A folder of PHP files organized by date
+B) An organized collection of data stored in tables, allowing easy access, update, and management
+C) A type of server that runs PHP code
+D) A JavaScript object that stores temporary user data
+
+---
+
+**Q90.** In a MySQL database, what is a Primary Key?
+
+A) The first column in any table regardless of its content
+B) A unique identifier for each row — must be unique and never null, usually named `id`
+C) A foreign reference to another table
+D) A column that stores encrypted password data
+
+---
+
+**Q91.** Which MySQL data type is best suited for storing a user's name with a maximum length?
+
+A) `INT`
+B) `TEXT`
+C) `FLOAT`
+D) `VARCHAR(100)`
+
+---
+
+**Q92.** Which MySQL data type should be used for storing monetary values that require precise decimal accuracy?
+
+A) `FLOAT`
+B) `DOUBLE`
+C) `DECIMAL`
+D) `INT`
+
+---
+
+**Q93.** What does `AUTO_INCREMENT` do on the `id` column in MySQL?
+
+A) Multiplies the id by 2 for each new row
+B) Automatically assigns the next sequential number to each new row inserted
+C) Randomly generates a unique ID
+D) Copies the id from the previous row
+
+---
+
+**Q94.** What is phpMyAdmin?
+
+A) A PHP framework for building MVC applications
+B) A browser-based tool for visually managing MySQL databases
+C) A command-line PHP testing environment
+D) A MySQL query optimization engine
+
+---
+
+**Q95.** Which PHP function is used to connect to a MySQL database using MySQLi?
+
+A) `mysql_open()`
+B) `pdo_connect()`
+C) `mysqli_connect()`
+D) `db_connect()`
+
+---
+
+**Q96.** What are the four correct parameters passed to `mysqli_connect()` in order?
+
+A) Username, password, host, database name
+B) Host, username, password, database name
+C) Database name, host, username, password
+D) Host, database name, password, username
+
+---
+
+**Q97.** What does `die()` do when used after a failed `mysqli_connect()` call?
+
+A) Retries the connection automatically
+B) Logs the error to a database table
+C) Stops the script execution and displays an error message
+D) Redirects the user to a safe error page
+
+---
+
+**Q98.** Which PHP function executes a SQL query against a MySQL database using MySQLi?
+
+A) `mysqli_run()`
+B) `mysqli_execute()`
+C) `mysqli_query()`
+D) `mysqli_send()`
+
+---
+
+**Q99.** Which SQL command is used to retrieve data from a database table?
+
+A) `GET`
+B) `FETCH`
+C) `SELECT`
+D) `RETRIEVE`
+
+---
+
+**Q100.** What does `mysqli_fetch_assoc()` return?
+
+A) The total number of rows returned by a query
+B) All rows as a 2D array at once
+C) One row from the result set as an associative array
+D) The column names of the query result
+
+---
+
+**Q101.** What does `mysqli_num_rows()` return?
+
+A) The number of columns in the result
+B) The size of the database in bytes
+C) The number of rows returned by a SELECT query
+D) The ID of the last inserted row
+
+---
+
+**Q102.** Which SQL command is used to add a new row of data into a table?
+
+A) `ADD INTO`
+B) `CREATE ROW`
+C) `INSERT INTO`
+D) `PUT INTO`
+
+---
+
+**Q103.** Which SQL command is used to modify existing data in a table?
+
+A) `MODIFY`
+B) `CHANGE`
+C) `SET`
+D) `UPDATE`
+
+---
+
+**Q104.** What is the danger of running an `UPDATE` or `DELETE` SQL query WITHOUT a `WHERE` clause?
+
+A) The query will fail with a syntax error
+B) The query will affect ALL rows in the table, not just the intended one
+C) The query will only affect the first row
+D) The query will create a duplicate table
+
+---
+
+**Q105.** What is the main difference between MySQLi and PDO in PHP?
+
+A) MySQLi supports object-oriented programming; PDO does not
+B) PDO only works with PostgreSQL; MySQLi works with MySQL only
+C) MySQLi works only with MySQL; PDO works with multiple database types
+D) PDO is older and less secure than MySQLi
+
+---
+
+## 🟣 Section 6: HTTP, AJAX & Security
+
+**Q106.** What does HTTP stand for?
+
+A) HyperText Transfer Protocol
+B) Hyperlink Text Transfer Process
+C) HyperText Transmission Page
+D) High Transfer Text Protocol
+
+---
+
+**Q107.** Which HTTP method is used to RETRIEVE data from a server without modifying anything?
+
+A) POST
+B) PUT
+C) DELETE
+D) GET
+
+---
+
+**Q108.** Which HTTP method is used to UPDATE an existing resource on the server?
+
+A) POST
+B) GET
+C) PUT
+D) PATCH
+
+---
+
+**Q109.** What does HTTP status code `404` indicate?
+
+A) The server encountered an internal error
+B) The request was successful
+C) The requested resource was not found
+D) The user is not authorized to access the resource
+
+---
+
+**Q110.** What does HTTP status code `500` indicate?
+
+A) The resource was successfully created
+B) The request was redirected to a new URL
+C) The server encountered an internal error
+D) The client sent a bad request
+
+---
+
+**Q111.** In a URL such as `https://www.example.com/users?id=5`, what is `?id=5` called?
+
+A) The protocol
+B) The fragment
+C) The path
+D) The query string
+
+---
+
+**Q112.** What is the main problem with traditional PHP web applications that AJAX solves?
+
+A) Traditional PHP cannot connect to databases
+B) Traditional PHP reloads the entire page for every user action, causing poor user experience
+C) Traditional PHP does not support form validation
+D) Traditional PHP cannot handle multiple users at the same time
+
+---
+
+**Q113.** What does AJAX stand for?
+
+A) Asynchronous JavaScript and XML
+B) Automated JavaScript and XHTML
+C) Advanced JavaScript API Exchange
+D) Asynchronous Java Application Extension
+
+---
+
+**Q114.** What is the correct order of steps in an AJAX request flow?
+
+A) Server sends data → JavaScript updates page → User performs action → PHP processes
+B) User performs action → JavaScript sends request → PHP processes → Server returns data → JavaScript updates page
+C) PHP processes → User performs action → JavaScript updates page → Server returns data
+D) JavaScript updates page → User performs action → Server returns data → PHP processes
+
+---
+
+**Q115.** What format does a server typically return data in when responding to an AJAX request?
+
+A) Plain PHP code
+B) A full HTML page
+C) JSON (JavaScript Object Notation)
+D) A binary file
+
+---
+
+**Q116.** What is the Fetch API in JavaScript?
+
+A) A PHP function that retrieves data from a database
+B) A DOM method for finding HTML elements on a page
+C) A modern JavaScript API for making HTTP requests without reloading the page
+D) A browser tool for inspecting network traffic
+
+---
+
+**Q117.** What does a JavaScript Promise represent?
+
+A) A variable that stores multiple values at once
+B) A guarantee that a function will always succeed
+C) An eventual result of an asynchronous operation — success or failure
+D) A function that runs immediately without waiting
+
+---
+
+**Q118.** In a Fetch API chain, which method handles the response if something goes wrong?
+
+A) `.then()`
+B) `.finally()`
+C) `.catch()`
+D) `.error()`
+
+---
+
+**Q119.** What is SQL Injection?
+
+A) A method of speeding up MySQL queries using indexes
+B) A cyberattack where malicious SQL code is inserted into input fields to manipulate a database
+C) A PHP function for inserting data into a database safely
+D) A technique for organizing SQL queries in an MVC application
+
+---
+
+**Q120.** Which of the following inputs is a classic example of a SQL Injection attempt?
+
+A) `sara@email.com`
+B) `<script>alert('xss')</script>`
+C) `' OR 1=1 --`
+D) `password123`
+
+---
+
+**Q121.** What is the most effective way to prevent SQL Injection in PHP?
+
+A) Validating that the input is not empty using `isset()`
+B) Using prepared statements (parameterized queries) with PDO or MySQLi
+C) Limiting input to 50 characters
+D) Storing all queries in a separate file
+
+---
+
+**Q122.** What is Cross-Site Scripting (XSS)?
+
+A) An attack where SQL code is injected into a database
+B) An attack where malicious JavaScript is injected into web pages and runs in other users' browsers
+C) An attack that forces a logged-in user to submit unauthorized requests
+D) An attack that intercepts HTTP traffic between client and server
+
+---
+
+**Q123.** Which of the three XSS types stores the malicious script in the database so it runs every time the page loads?
+
+A) Reflected XSS
+B) DOM-based XSS
+C) Stored XSS
+D) Injected XSS
+
+---
+
+**Q124.** Which PHP function should be used to escape user data before displaying it in a webpage to prevent XSS?
+
+A) `strip_tags()`
+B) `htmlspecialchars()`
+C) `addslashes()`
+D) `urlencode()`
+
+---
+
+**Q125.** What is CSRF (Cross-Site Request Forgery)?
+
+A) An attack where SQL code is injected into form fields
+B) An attack where malicious scripts are stored in the database
+C) An attack that forces a logged-in user's browser to perform unwanted actions on a trusted website
+D) An attack that steals session cookies by intercepting network traffic
+
+---
+
+**Q126.** What is the primary defense mechanism against CSRF attacks?
+
+A) Using prepared statements for all database queries
+B) Escaping HTML output with `htmlspecialchars()`
+C) Including a unique Anti-CSRF token in every form and verifying it server-side
+D) Using HTTPS for all web traffic
+
+---
+
+**Q127.** Which aspect of web security does each attack primarily target?
+
+A) SQL Injection → browser; XSS → database; CSRF → server
+B) SQL Injection → database; XSS → user's browser; CSRF → user's session
+C) SQL Injection → cookies; XSS → server; CSRF → database
+D) All three attacks target the same layer
+
+---
+
+## ⚫ Section 7: MVC Architecture
+
+**Q128.** What does MVC stand for?
+
+A) Model – Variable – Constructor
+B) Module – View – Configuration
+C) Model – View – Controller
+D) Method – Value – Class
+
+---
+
+**Q129.** What is the "Separation of Concerns" principle in MVC?
+
+A) Keeping all code in one file for easier management
+B) Each MVC layer has one clearly defined responsibility and does not do another layer's job
+C) Separating the database from the server
+D) Using separate servers for front-end and back-end code
+
+---
+
+**Q130.** What is "spaghetti code" and why is it a problem?
+
+A) Code that uses too many loops, making it slow
+B) Code where PHP logic, HTML, and SQL are all mixed together in one file, making it hard to read and maintain
+C) Code that has too many functions defined in a single class
+D) Code that uses recursion instead of iteration
+
+---
+
+**Q131.** In MVC, which component is responsible for all database queries and business logic?
+
+A) The View
+B) The Router
+C) The Controller
+D) The Model
+
+---
+
+**Q132.** In MVC, what is the ONLY responsibility of the View layer?
+
+A) Connecting to the database and fetching records
+B) Receiving HTTP requests and deciding which Model to call
+C) Displaying data to the user using HTML templates with minimal PHP
+D) Validating user input before passing it to the Model
+
+---
+
+**Q133.** What is the role of the Controller in MVC?
+
+A) It stores all the application data and enforces business rules
+B) It renders HTML templates and handles CSS styling
+C) It receives HTTP requests, calls the Model for data, and passes that data to the correct View
+D) It maps URLs to specific files on the server
+
+---
+
+**Q134.** What does the Router do in an MVC application?
+
+A) Stores database connection details
+B) Maps incoming URLs to the correct Controller and method
+C) Generates HTML output for the user
+D) Validates all incoming form data
+
+---
+
+**Q135.** What is a "Thin Controller" principle in MVC?
+
+A) Controllers should have as few HTML tags as possible
+B) Controllers should have minimal code — complex business logic belongs in the Model, not the Controller
+C) Controllers should only handle GET requests, not POST
+D) Each Controller should handle only one HTTP method
+
+---
+
+**Q136.** What is a Front Controller pattern in MVC?
+
+A) A special View that handles all authentication pages
+B) The first Model that connects to the database on page load
+C) A single entry point (`index.php`) that ALL requests pass through before being routed
+D) A Controller that only handles the homepage
+
+---
+
+**Q137.** Which standard controller method handles displaying a list of all records (e.g., all students)?
+
+A) `show()`
+B) `create()`
+C) `index()`
+D) `store()`
+
+---
+
+**Q138.** In an MVC PHP project, which folder should be the ONLY one accessible from the web?
+
+A) `app/models/`
+B) `app/controllers/`
+C) `config/`
+D) `public/`
+
+---
+
+**Q139.** Which of these is a sign of a design problem in an MVC View file?
+
+A) Using `foreach` to loop through an array passed by the Controller
+B) Using `htmlspecialchars()` when echoing variables
+C) Making a direct database query using `PDO::prepare()`
+D) Using PHP variables passed from the Controller
+
+---
+
+**Q140.** Why is MVC better for team collaboration than spaghetti code?
+
+A) MVC runs faster on shared servers
+B) MVC automatically generates documentation for each file
+C) Frontend developers can work on Views while backend developers work on Models and Controllers independently
+D) MVC prevents all merge conflicts in version control
+
+---
+
+## 🟤 Section 8: Object-Oriented Programming (OOP) in PHP
+
+**Q141.** What is a class in PHP OOP?
+
+A) A running instance of an object in memory
+B) A blueprint or template that defines the structure and behavior of objects
+C) A built-in PHP function for handling data
+D) A database table representation in code
+
+---
+
+**Q142.** What is an object in PHP OOP?
+
+A) A method that returns a value
+B) A variable that stores multiple arrays
+C) A specific instance created from a class using the `new` keyword
+D) A PHP keyword for defining reusable code blocks
+
+---
+
+**Q143.** What does `$this` refer to inside a PHP class method?
+
+A) The parent class of the current class
+B) The current object instance — used to access its own properties and methods
+C) The class definition itself
+D) The constructor method
+
+---
+
+**Q144.** What is the Four Pillars of OOP?
+
+A) Variables, Functions, Arrays, Objects
+B) Encapsulation, Inheritance, Polymorphism, Abstraction
+C) Public, Private, Protected, Static
+D) Model, View, Controller, Router
+
+---
+
+**Q145.** What does Encapsulation mean in OOP?
+
+A) A child class inheriting methods from a parent class
+B) Bundling data and methods together AND restricting direct access to internal data using access modifiers
+C) Different objects responding to the same method call in different ways
+D) Hiding the implementation of a method behind an interface
+
+---
+
+**Q146.** Which access modifier makes a property or method accessible ONLY from within the class itself?
+
+A) `public`
+B) `protected`
+C) `private`
+D) `static`
+
+---
+
+**Q147.** Which access modifier allows a property or method to be accessed from within the class AND from child classes, but NOT from outside?
+
+A) `public`
+B) `private`
+C) `static`
+D) `protected`
+
+---
+
+**Q148.** What is the purpose of a getter method in OOP?
+
+A) To delete a private property
+B) To validate and update the value of a private property
+C) To return the value of a private property in a controlled way
+D) To connect the class to a database
+
+---
+
+**Q149.** What does Inheritance mean in PHP OOP?
+
+A) A class borrowing methods from an interface
+B) A trait injecting methods into a class
+C) A child class acquiring all properties and methods of a parent class using `extends`
+D) A class implementing multiple contracts simultaneously
+
+---
+
+**Q150.** In PHP, how many parent classes can a child class extend at the same time?
+
+A) Unlimited
+B) Up to 3
+C) Only 1
+D) Only 2
+
+---
+
+**Q151.** Which PHP keyword is used for a child class to inherit from a parent class?
+
+A) `implements`
+B) `inherits`
+C) `use`
+D) `extends`
+
+---
+
+**Q152.** What does method overriding mean in PHP inheritance?
+
+A) Deleting a parent class method in the child
+B) A child class redefining a method it inherited from the parent with new behavior
+C) A child class calling its parent's constructor
+D) Renaming a method when it is inherited
+
+---
+
+**Q153.** Which PHP keyword is used inside a child class to call the parent class's version of a method?
+
+A) `super::`
+B) `base::`
+C) `parent::`
+D) `this::`
+
+---
+
+**Q154.** What does Polymorphism mean in PHP OOP?
+
+A) A class having both public and private methods
+B) A child class having the same name as its parent
+C) Different objects responding to the same method call in their own unique way
+D) A class implementing multiple interfaces simultaneously
+
+---
+
+**Q155.** What is the practical benefit of Polymorphism in code design?
+
+A) It allows classes to have unlimited inheritance chains
+B) It eliminates the need for `if/else` or `switch` blocks that check what type of object you have
+C) It allows one class to connect to multiple databases
+D) It makes all properties automatically private
+
+---
+
+**Q156.** What is an Interface in PHP OOP?
+
+A) A reusable block of methods that can be injected into any class
+B) A class that cannot be instantiated directly
+C) A pure contract that defines WHAT methods a class must have, without providing any implementation
+D) A child class that inherits from multiple parents
+
+---
+
+**Q157.** Which PHP keyword does a class use to sign a contract with an interface?
+
+A) `extends`
+B) `use`
+C) `inherits`
+D) `implements`
+
+---
+
+**Q158.** What is a key advantage of interfaces over inheritance for code contracts?
+
+A) Interfaces allow method bodies; inheritance does not
+B) A class can implement MULTIPLE interfaces, while it can only extend ONE parent class
+C) Interfaces are faster to process than inherited classes
+D) Interfaces automatically generate getter and setter methods
+
+---
+
+**Q159.** What can an interface contain?
+
+A) Regular properties, method bodies, and constructors
+B) Only constants and method signatures (no implementation, no regular properties)
+C) Static methods with full implementations
+D) Private methods and abstract constructors
+
+---
+
+**Q160.** What is a Trait in PHP OOP?
+
+A) A special type of interface that allows method bodies
+B) A class that can only be used as a parent
+C) A reusable group of methods that can be mixed into any class using the `use` keyword
+D) An object that inherits from multiple parent classes
+
+---
+
+**Q161.** Which PHP keyword is used to include a Trait inside a class?
+
+A) `extends`
+B) `implements`
+C) `import`
+D) `use`
+
+---
+
+**Q162.** What problem do Traits solve that interfaces alone cannot?
+
+A) Traits allow a class to implement multiple contracts
+B) Traits provide actual reusable method implementations that can be shared between unrelated classes
+C) Traits allow access to private properties of other classes
+D) Traits allow a class to extend multiple parents
+
+---
+
+**Q163.** What is the key difference between using a Trait and using Inheritance?
+
+A) Traits can only be used once per class; inheritance can be used multiple times
+B) Traits inject code without creating a parent-child relationship; inheritance creates a strict hierarchy
+C) Inheritance is for sharing methods; Traits are for sharing properties only
+D) Traits require interfaces; inheritance does not
+
+---
+
+**Q164.** What happens if two Traits used in the same class define a method with the same name?
+
+A) PHP automatically uses the first Trait's method and ignores the second
+B) PHP throws a fatal error and stops
+C) A conflict occurs that must be resolved using `insteadof` and `as` keywords
+D) The two methods are merged into one automatically
+
+---
+
+**Q165.** What naming convention should PHP class names follow?
+
+A) snake_case: `bank_account`
+B) camelCase: `bankAccount`
+C) UPPER_CASE: `BANKACCOUNT`
+D) PascalCase: `BankAccount`
+
+---
+
+**Q166.** What is the `__construct()` method in a PHP class?
+
+A) A method that runs automatically when the object is destroyed
+B) A method that connects the class to a database
+C) A special method that runs automatically when a new object is created with `new`
+D) A method used to copy one object into another
+
+---
+
+**Q167.** What is the correct way to access a property of an object in PHP?
+
+A) `$object::property`
+B) `$object->property`
+C) `$object.property`
+D) `$object[property]`
+
+---
+
+**Q168.** Which of the following best describes the relationship "Dog IS an Animal" in OOP?
+
+A) Trait relationship
+B) Interface implementation
+C) Inheritance relationship using `extends`
+D) Polymorphic substitution
+
+---
+
+**Q169.** Which of the following best describes the relationship "Document CAN BE Printed" in OOP?
+
+A) Inheritance relationship using `extends`
+B) Interface implementation using `implements`
+C) Trait injection using `use`
+D) Constructor overriding
+
+---
+
+**Q170.** Looking at all the OOP concepts together — which combination is correct for a class `PremiumUser` that shares a parent class, fulfills two contracts, AND borrows utility methods?
+
+A) `class PremiumUser extends User implements Printable use Logger`
+B) `class PremiumUser extends User implements Printable, Saveable { use Logger; }`
+C) `class PremiumUser implements User extends Printable { use Saveable; }`
+D) `class PremiumUser use Logger implements User extends Printable`
+
+---
+
+## ✅ Answer Key
+
+| Q | A | Q | A | Q | A | Q | A | Q | A |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | B | 2 | B | 3 | C | 4 | C | 5 | C |
+| 6 | D | 7 | C | 8 | C | 9 | D | 10 | B |
+| 11 | C | 12 | C | 13 | B | 14 | C | 15 | C |
+| 16 | B | 17 | B | 18 | C | 19 | D | 20 | B |
+| 21 | C | 22 | C | 23 | B | 24 | C | 25 | B |
+| 26 | B | 27 | C | 28 | C | 29 | B | 30 | C |
+| 31 | B | 32 | C | 33 | B | 34 | C | 35 | C |
+| 36 | C | 37 | B | 38 | B | 39 | B | 40 | C |
+| 41 | B | 42 | C | 43 | D | 44 | B | 45 | C |
+| 46 | C | 47 | B | 48 | D | 49 | B | 50 | C |
+| 51 | B | 52 | C | 53 | B | 54 | C | 55 | C |
+| 56 | D | 57 | B | 58 | B | 59 | B | 60 | C |
+| 61 | C | 62 | B | 63 | B | 64 | B | 65 | D |
+| 66 | C | 67 | D | 68 | C | 69 | B | 70 | B |
+| 71 | C | 72 | C | 73 | B | 74 | B | 75 | C |
+| 76 | B | 77 | C | 78 | D | 79 | D | 80 | C |
+| 81 | D | 82 | C | 83 | B | 84 | B | 85 | C |
+| 86 | B | 87 | B | 88 | C | 89 | B | 90 | B |
+| 91 | D | 92 | C | 93 | B | 94 | B | 95 | C |
+| 96 | B | 97 | C | 98 | C | 99 | C | 100 | C |
+| 101 | C | 102 | C | 103 | D | 104 | B | 105 | C |
+| 106 | A | 107 | D | 108 | C | 109 | C | 110 | C |
+| 111 | D | 112 | B | 113 | A | 114 | B | 115 | C |
+| 116 | C | 117 | C | 118 | C | 119 | B | 120 | C |
+| 121 | B | 122 | B | 123 | C | 124 | B | 125 | C |
+| 126 | C | 127 | B | 128 | C | 129 | B | 130 | B |
+| 131 | D | 132 | C | 133 | C | 134 | B | 135 | B |
+| 136 | C | 137 | C | 138 | D | 139 | C | 140 | C |
+| 141 | B | 142 | C | 143 | B | 144 | B | 145 | B |
+| 146 | C | 147 | D | 148 | C | 149 | C | 150 | C |
+| 151 | D | 152 | B | 153 | C | 154 | C | 155 | B |
+| 156 | C | 157 | D | 158 | B | 159 | B | 160 | C |
+| 161 | D | 162 | B | 163 | B | 164 | C | 165 | D |
+| 166 | C | 167 | B | 168 | C | 169 | B | 170 | B |
